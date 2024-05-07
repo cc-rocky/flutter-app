@@ -1,0 +1,15 @@
+name: My Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract Workflow Name
+        run: |
+          workflow_name="${{ github.workflow }}"
+          echo "Workflow Name: $workflow_name"
