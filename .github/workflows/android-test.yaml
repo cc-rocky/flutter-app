@@ -34,3 +34,4 @@ jobs:
           script: |
             flutter clean
             flutter pub get
+            flutter drive --driver=app-test/integration_driver/integration_test_driver.dart --target=app-test/tests/dummy_test.dart

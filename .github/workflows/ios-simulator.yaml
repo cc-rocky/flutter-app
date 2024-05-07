@@ -21,4 +21,5 @@ jobs:
           channel: 'stable'
 
       - run: flutter pub get
-      - run: flutter test integration_test
+      - name: Flutter Integration Test
+        run: flutter drive --driver=app-test/integration_driver/integration_test_driver.dart --target=app-test/tests/dummy_test.dart
